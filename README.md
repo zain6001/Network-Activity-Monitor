@@ -289,20 +289,7 @@ Raw packet capture requires `CAP_NET_RAW` capability, available only to root.
 - Traffic filtering
 - Remote monitoring
 
----
 
-## 📞 Support
-
-### Common Issues
-See [README.md](README.md) Troubleshooting section
-
-### Usage Examples
-See [USAGE.md](USAGE.md) for detailed scenarios
-
-### Database Queries
-See [USAGE.md](USAGE.md) Advanced Usage section
-
----
 
 ## 🎉 Success Indicators
 
@@ -344,9 +331,6 @@ sqlite3 network_monitor.db "SELECT COUNT(*) FROM traffic_log;"
 ---
 
 **You're all set! Happy monitoring! 🎊**
-
-For detailed documentation, see [README.md](README.md)
-For usage examples, see [USAGE.md](USAGE.md)
 
 
 
