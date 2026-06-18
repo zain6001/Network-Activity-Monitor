@@ -2,6 +2,34 @@
 
 ## OS-Level Network Bandwidth Monitoring & Traffic Logger with Per-Process Tracking (Linux)
 
+## 🏗️ Architecture Overview
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     TKINTER GUI LAYER                       │
+│  - Process Table    - Control Buttons    - Statistics      │
+│  - Alert Panel      - Status Bar         - Reports         │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+         ┌─────────────┴─────────────┐
+         │                           │
+┌────────▼─────────┐      ┌─────────▼──────────┐
+│  PACKET CAPTURE  │      │  DATABASE LOGGER   │
+│  - Scapy Engine  │      │  - SQLite Storage  │
+│  - Protocol ID   │◄─────┤  - Report Gen      │
+│  - Bandwidth     │      │  - Alert Log       │
+└────────┬─────────┘      └────────────────────┘
+         │
+         │
+┌────────▼─────────┐
+│  PROCESS MAPPER  │
+│  - /proc scan    │
+│  - PID mapping   │
+│  - psutil        │
+└──────────────────┘
+```
+
+---
 
 # Network Bandwidth Monitor - Quick Start Guide
 
